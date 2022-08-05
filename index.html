@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>수도때리기</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="ranking">
+        <h3></h3>
+        <!-- <h3>랭킹</h3> -->
+      </div>
+      <h1>수도 때리기</h1>
+      <nav>
+        <div>
+          <div class="login-box">
+            <a id="join">회원가입</a>
+            <a id="login">로그인</a>
+          </div>
+          <div class="logout-box">
+            <a id="logout">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="country">
+        <div class="countrytitle">
+          <div><h3>COUNTRY</h3></div>
+          <div>
+            <select id="cont_box" onchange="load_flags(this.value)">
+              <option value="">대륙 선택</option>
+              <option value="아시아">아시아</option>
+              <option value="아프리카">아프리카</option>
+              <option value="유럽">유럽</option>
+              <option value="북아메리카">북아메리카</option>
+              <option value="남아메리카">남아메리카</option>
+              <option value="오세아니아">오세아니아</option>
+            </select>
+          </div>
+        </div>
+        <ul class="flags">
+          <li>
+            <a
+              ><img src="./img/kr.png" title="대한민국" alt="대한민국국기"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="map">
+        <a><img src="./img/map.png" title="세계지도" alt="세계지도사진" /></a>
+      </div> -->
+      <!-- 정답 입력 모달창 -->
+      <div class="modal" id="answer-modal">
+        <div>
+          <img
+            class="modal-flag"
+            src="./img/kr.png"
+            title="대한민국"
+            alt="대한민국국기"
+          />
+          <h3>대한민국</h3>
+        </div>
+        <div>
+          <input
+            id="answer-capital"
+            type="text"
+            placeholder="수도 이름을 입력하시오."
+            autocomplete="off"
+          />
+          <input id="submit-answer" type="submit" value="확인" />
+        </div>
+      </div>
+      <!-- 국가 입력 모달창-->
+      <div class="modal" id="add-modal">
+        <div>
+          <h3>국가 입력 모달창</h3>
+        </div>
+        <div>
+          <form name="frm">
+            <input name="img" type="text" placeholder="그림파일 이름" />
+            <input name="capital" type="text" placeholder="수도 이름" />
+            <input name="cont" type="text" placeholder="대륙 이름" />
+            <input name="name" type="text" placeholder="나라 이름" />
+            <input type="button" onclick="add_country()" value="확인" />
+            <input
+              name="del_name"
+              type="text"
+              placeholder="또는 삭제할 나라 이름"
+            />
+            <button id="delete-button">삭제</button>
+          </form>
+        </div>
+      </div>
+      <!-- 회원 가입 모달창 -->
+      <div class="modal" id="join-modal">
+        <div>
+          <h3>REGISTER</h3>
+        </div>
+        <div>
+          <input id="jnickname" type="text" placeholder="닉네임을 입력" />
+          <input id="jsubmit" type="submit" value="JOIN" />
+        </div>
+      </div>
+      <!-- 로그인 모달창 -->
+      <div class="modal" id="login-modal">
+        <div>
+          <h3>LOG IN</h3>
+        </div>
+        <div>
+          <input id="nickname" type="text" placeholder="닉네임을 입력" />
+          <input id="submit-login" type="submit" value="LOG IN" />
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      지우 & 성찬 제작 <br />
+      수도때리기 ver 0.1
+    </footer>
+    <img class="after-answer" id="o-mark" src="./img/O 아이콘.png" />
+    <img class="after-answer" id="x-mark" src="./img/X 아이콘.png" />
+  </body>
+</html>
