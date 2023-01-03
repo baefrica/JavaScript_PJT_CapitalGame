@@ -1,3 +1,4 @@
-# javascript_project_capitalgame
+# JavaScript_PJT_CapitalGame
 
-- html / css / javascript 활용하여 수도 맞추기 프로그램 구현
+- 주제 : 여러 국가의 국기를 보고 수도를 맞추는 게임
+- 사용한 기술 스택 : Html / Css / JS
